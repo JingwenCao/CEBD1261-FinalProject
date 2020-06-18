@@ -7,32 +7,33 @@ README file (report)briefly summarizing the results obtained, explaining in 1-5 
 ## Modelling and Predictions
 ### Research Question
 
-Which machine-learning model best predicts whether a tumor is benign or malignant?
-
-#### Abstract
-
-Using Fine Needle Aspiration, 30 samples of breast cancer cells were collected by Dr. William H. Wolberg, from the University of Wisconsin. Using this data, we tried to determine the machine learning algorithm that would best predict whether a sample was benign or malignant, based on the features provided. This was done by selecting 8 classification models, and plotting their respective contours and scores over the training and testing data. From the preliminary analysis, we see that the best algorithm was the Logistic Regression model, though further analysis should be done to manipulate the parameters of each model.
+How accurately can we predict video games sales using Random Forest Regression?
 
 #### Introduction
 
-Whilst there are several ways to determine whether breast cancer cells are cancerous or not, one of the less invasive ways is via FNA (fine needle aspiration), wherein a thin, hollow needle is used to withdraw tissue or fluid from a suspicious area [1]. The Wisconsin Breast Cancer Data Set consists of 569 instances of digitized images of breast masses collected by FNA, and is relatively clean and noise-free. Each image is tagged with an ID number, as well as its diagnosis (benign or malignant), and the means, standard errors, and “worst” or largest values of ten features are described for each image [2]. Thus, this dataset is well suited to try to assess which machine-learning model best predicts whether breast mass cells are benign or malignant. The analysis will be conducted by Jingwen Cao, using the following libraries: Sklearn, Matplotlib, and Numpy. The graphs represent the performance and visualizations for the various models applied to the data.
+Based on field research, Random Forest Regression has unanimously emerged as the most accurate prediction model for global video game sales based on the data scraped from vgchartz.com (A list of video games with sales greater than 100,000 copies). Each record included a rank (relative to overall sales), the name of the game, the platform of the games release, the year of release, the genre of the game, the publisher of the game, and its sales in millions in North America, Europe, Japan, Other (the rest of the world), as well as globally. The analysis was conducted using the following libraries: SKlearn, Matplotlib, Numpy, and Pandas. The figures below represent the feature importance of the fields, as well as the performance of the selected model.
 
 #### Methods
 
-All supervised classification training models from the Scikit Learn resource for generalized linear models were selected to be assessed to determine the model that most accurately predicted whether a sample was malignant or benign [4]. These include: Logistic Regression, Support Vector Machines, Stochastic Gradient Descent, Nearest Neighbor, Naïve Bayes, Decision Trees, and Ensemble Methods. All data was split into two groups: Training data and test data, and subsequently standardized, as they varied drastically in magnitude [3]. All pseudocode can be found here (hyperlink). Accuracy scores for all models were plotted in a bar graph, as shown in Figure 1 below.
-
-###### Figure 1
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+Following some exploratory data analysis using SQL in Databricks, the data was loaded into a Pandas dataframe for modelling and prediction. NaN values were handled for the Publisher field by dropping the rows with null values, and for the Year row by replacing the values with the median. The Name and Rank fields were dropped, as they did not add accuracy to the predictions. Lastly, the categorical fields Publisher, Platform, and Genre fields were label encoded. Some optimization was done by the way of converting all fields to a float16 type. The data was then split into features and target, and split again into test and train sets. Finally, the Random Forest Regression was fitted with this data, over 5 k-folds. 
 
 
 #### Results
 
-The supervised classification model that most accurately predicted whether the test samples were benign were malignant was the Logistic Regression model. Figure 2 below shows the performance on the test set.
+By printing the feature importances, we see that by far the strongest predictor for global sales was North American sales. Features such as Platform, Year, Genre, and Publisher had next to no impact on the performance of the game in the market.
+The Random Forest Regression model, however, with the following fields, was able to quite accurately predict the global sales based on the training set:
+
+| Parameter     | Value         |
+| ------------- |:-------------:|
+| n_estimators  | 100           |
+| max_depth     | 10            |
+| n_jobs        | -1            |
+
+###### Figure 1
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
 
 ###### Figure 2
 ![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
 
-The Logistic Regression model was the most accurate model (0.965) by a very small margin, over the Nearest Neighbours model (0.961). Overall, all regressors performed fairly similarly, with no significant differences between models. One model trending towards a significant difference was the Naive Bayes model as it seemed to struggle to handle the cases where the two samples overlapped.
-
 #### Discussion
-All classification models were used with their default settings. While this gave us a preliminary idea of which algorithm performed well or not, tweaking the parameters could change their overall performance. None of the models breached a performance of 0.96, which means there is room for improvement. Thus, more in depth testing, with manipulation of all sensible parameters, needs to be done to determine the absolute best model. After all, when it comes to live diagnosis, a false negative, and even a false positive, can have very a significant and negative impact on the patients.
+It's no wonder the North American market is such a 
