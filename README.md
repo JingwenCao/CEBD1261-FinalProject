@@ -29,22 +29,22 @@ Following some exploratory data analysis using SQL in Databricks, the data was l
 ### EDA and Feature Correlation
 
 ###### Figure 1
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/GlobalSalesvsYear.png)
 
 ###### Figure 2
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerRegion.png)
 
 ###### Figure 3
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerPlatform.png)
 
 ###### Figure 4
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerPublisher.png)
 
 ###### Figure 5
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/OldvsNewGames.png)
 
 ###### Figure 6
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/CorrelationMatrix.png)
 
 ### Modelling and Predictions
 
@@ -58,10 +58,10 @@ The Random Forest Regression model, however, with the following fields, was able
 | n_jobs        | -1            |
 
 ###### Figure 7
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/FeatureImportance.png)
 
 ###### Figure 8
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/AccuracyofModel.png)
 
 ## Discussion
 It's no wonder the North American market is such a coveted one in the video game industry based on the results of this study. The success of a game, regardless of its publisher, platform, genre, and year of release, is almost entirely dependent on its ability to sell in North America. However, this dataset is clearly quite biased, as it is comprised of video games that have already sold well historically. Thus, this may have been impacted by factors such as the prevalance of the video game industry in the respective countries (for example, video games have been prevalent mostly in the US and Japan, but did not start to build traction until much later in other countries). Additionally, some major platforms have been left out of the dataset, such as mobile platforms and VR/XR/AR, which are titans in the industry today, and could heavily skew the data in a different direction altogether.
