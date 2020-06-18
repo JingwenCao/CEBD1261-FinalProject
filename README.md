@@ -22,7 +22,7 @@ Whilst there are several ways to determine whether breast cancer cells are cance
 All supervised classification training models from the Scikit Learn resource for generalized linear models were selected to be assessed to determine the model that most accurately predicted whether a sample was malignant or benign [4]. These include: Logistic Regression, Support Vector Machines, Stochastic Gradient Descent, Nearest Neighbor, Naïve Bayes, Decision Trees, and Ensemble Methods. All data was split into two groups: Training data and test data, and subsequently standardized, as they varied drastically in magnitude [3]. All pseudocode can be found here (hyperlink). Accuracy scores for all models were plotted in a bar graph, as shown in Figure 1 below.
 
 ###### Figure 1
-![Figure 1](https://github.com/JingwenCao/CEBD1160-Final_Project/blob/master/Classifiers_Performance.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
 
 
 #### Results
@@ -30,7 +30,7 @@ All supervised classification training models from the Scikit Learn resource for
 The supervised classification model that most accurately predicted whether the test samples were benign were malignant was the Logistic Regression model. Figure 2 below shows the performance on the test set.
 
 ###### Figure 2
-![Figure 2](https://github.com/JingwenCao/CEBD1160-Final_Project/blob/master/Classifiers_Plots.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
 
 The Logistic Regression model was the most accurate model (0.965) by a very small margin, over the Nearest Neighbours model (0.961). Overall, all regressors performed fairly similarly, with no significant differences between models. One model trending towards a significant difference was the Naive Bayes model as it seemed to struggle to handle the cases where the two samples overlapped.
 
