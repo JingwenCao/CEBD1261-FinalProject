@@ -1,6 +1,10 @@
 # CEBD1261-FinalProject
 
-README file (report)briefly summarizing the results obtained, explaining in 1-5 lines how toreproduce the results using the developed code, and reporting a few linesof conclusions
+*To run the code:*
+1. Import the vgsales.csv file in Databricks
+2. Import the worksheet in Databricks
+3. Attach the worksheet to a running cluster with the mlflow library installed
+4. Run the worksheet
 
 ## EDA and Feature Correlation
 
