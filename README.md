@@ -12,11 +12,11 @@
 
 ## Research Question
 
-How accurately can we predict video games sales using Random Forest Regression?
+What interesting trends emerge from the data, and how accurately can we predict video games sales using Random Forest Regression?
 
 ## Introduction
 
-Based on field research, Random Forest Regression has unanimously emerged as the most accurate prediction model for global video game sales based on the data scraped from vgchartz.com (A list of video games with sales greater than 100,000 copies). Each record included a rank (relative to overall sales), the name of the game, the platform of the games release, the year of release, the genre of the game, the publisher of the game, and its sales in millions in North America, Europe, Japan, Other (the rest of the world), as well as globally. The analysis was conducted using the following libraries: SKlearn, Matplotlib, Numpy, and Pandas. The figures below represent the feature importance of the fields, as well as the performance of the selected model.
+The dataset, from Kaggle, consists of a list of video games with sales greater than 100,000 copies, which was scraped from vgchartz.com. Each record included a rank (relative to overall sales), the name of the game, the platform of the games release, the year of release, the genre of the game, the publisher of the game, and its sales in millions in North America, Europe, Japan, Other (the rest of the world), as well as globally. The analysis was conducted using spark, SQL, and python, particularly the following libraries: Sklearn, Matplotlib, Numpy, Seaborne and Pandas. The following report will go over the exploratory data analysis, as well as the predictive modelling done with the Random Forest Regression mdoel.
 
 ## Methods
 ### EDA and Feature Correlation
