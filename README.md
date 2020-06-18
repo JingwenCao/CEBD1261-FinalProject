@@ -36,4 +36,4 @@ The Random Forest Regression model, however, with the following fields, was able
 ![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
 
 #### Discussion
-It's no wonder the North American market is such a 
+It's no wonder the North American market is such a coveted one in the video game industry based on the results of this study. The success of a game, regardless of its publisher, platform, genre, and year of release, is almost entirely dependent on its ability to sell in North America. However, this dataset is clearly quite biased, as it is comprised of video games that have already sold well historically. Thus, this may have been impacted by factors such as the prevalance of the video game industry in the respective countries (for example, video games have been prevalent mostly in the US and Japan, but did not start to build traction until much later in other countries). Additionally, some major platforms have been left out of the dataset, such as mobile platforms and VR/XR/AR, which are titans in the industry today, and could heavily skew the data in a different direction altogether.
