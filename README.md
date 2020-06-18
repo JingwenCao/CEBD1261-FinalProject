@@ -20,12 +20,33 @@ Based on field research, Random Forest Regression has unanimously emerged as the
 
 ## Methods
 ### EDA and Feature Correlation
+The dataset was loaded into a spark table and subsequently cleaned. The Platform, Genre and Publisher fields were transformed into categorical data distribution (integer) through label encoding in order to calculate correlation matrix. Exploratory data analysis was done using SQL qureires, and visualized using the default Databricks display. Finally, Seaborn was used to create a correlation matrix to assess the correaltion of the features of the dataset.
 
 ### Modelling and Predictions
 Following some exploratory data analysis using SQL in Databricks, the data was loaded into a Pandas dataframe for modelling and prediction. NaN values were handled for the Publisher field by dropping the rows with null values, and for the Year row by replacing the values with the median. The Name and Rank fields were dropped, as they did not add accuracy to the predictions. Lastly, the categorical fields Publisher, Platform, and Genre fields were label encoded. Some optimization was done by the way of converting all fields to a float16 type. The data was then split into features and target, and split again into test and train sets. Finally, the Random Forest Regression was fitted with this data, over 5 k-folds. 
 
-
 ## Results
+### EDA and Feature Correlation
+
+###### Figure 1
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+
+###### Figure 2
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+
+###### Figure 3
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+
+###### Figure 4
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+
+###### Figure 5
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
+
+###### Figure 6
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
+
+### Modelling and Predictions
 
 By printing the feature importances, we see that by far the strongest predictor for global sales was North American sales. Features such as Platform, Year, Genre, and Publisher had next to no impact on the performance of the game in the market.
 The Random Forest Regression model, however, with the following fields, was able to quite accurately predict the global sales based on the training set:
@@ -36,10 +57,10 @@ The Random Forest Regression model, however, with the following fields, was able
 | max_depth     | 10            |
 | n_jobs        | -1            |
 
-###### Figure 1
+###### Figure 7
 ![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/08161862-91c6-44d1-afa0-14b1f235ab62.png)
 
-###### Figure 2
+###### Figure 8
 ![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/ec3e9fc2-410a-4ee1-95c8-092310ebabe5.png)
 
 ## Discussion
