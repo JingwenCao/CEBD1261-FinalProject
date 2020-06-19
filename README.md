@@ -29,32 +29,32 @@ Following some exploratory data analysis using SQL in Databricks, the data was l
 ### EDA and Feature Correlation
 
 ###### Figure 1
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/GlobalSalesvsYear.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/Figure_1.png)
 
 Here we plot Global Sales versus Year by using series grouping (sum) in Genre. This plot demonstrates how each category in Genre performs in terms of total Global Sales per year. From 1980 to 2010, almost all Genre categories show increasing Global Sales trend especially Action, Sports, Shooter and Misc. This plot also help us to understand how market volume increases in time. On the other hand, there is dramatic drop of Global Sales after 2014, which is probably due to lack of provided dataset after 2014. Amount of data provided for 2014 and after corresponds to only 10% of whole data.
 
 ###### Figure 2
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerRegion.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/Figure_2.png)
 
 We select first 20 games having the highest global sales and create a bar plot to visualize their sale rates by grouping them with respect to different markets. Market is dominated especially by the NA sales. This plot also demonstrates how regions can have different interest on gaming.
 
 ###### Figure 3
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerPlatform.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/Figure_3.png)
 
 It is pretty clear that Nintendo dominates the market between the years of 1980 and 2017. They share 63% of the total global sales of top 100 games. Activision follows Nintendo as second with its share of 11%, Take-two as third. This pie chart verifies that Nintendo, thanks to its product Wii, has very high global sales and therefore owns the majority of the market share.
 
 ###### Figure 4
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/MostPopularGamesPerPublisher.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/Figure_4.png)
 
 It is pretty clear that Nintendo dominates the market between the years of 1980 and 2017. They share 63% of the total global sales of top 100 games. Activision follows Nintendo as second with its share of 11%, Take-two as third. This pie chart verifies that Nintendo, thanks to its product Wii, has very high global sales and therefore owns the majority of the market share.
 
 ###### Figure 5
-![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/OldvsNewGames.png)
+![Figure 1](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/Figure_5.png)
 
 We classify Games with respect to their Year, labeled as OLD if it is released before 2007 and as NEW for 2007 and after. We determined 2007 as the Year in order to provide almost equal separation to provide balance. This bar plot indicates that NEW games have more total global sales than OLD games while OLD games have higher average global sales than the NEW ones.
 
 ###### Figure 6
-![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/CorrelationMatrix.png)
+![Figure 2](https://github.com/JingwenCao/CEBD1261-FinalProject/blob/master/Figures/heatmap.png)
 
  Among them, NA and EU sales have very high correlation with global sales such as 0.94 and 0.9 respectively. This verifies our initial observation in Figure 2 about the dominancy of NA and Europe in the market. NA and EU sales almost determine the global sale. However, JP has significantly less correlation with all NA, EU and Global sales. This indicates and verifies again our previous observation that JP market favours different type of games like Role Playing - Pokemon compared to others. On the other hand, Platform, Genre and Publisher show no correlation between each other and sales. Having no particular pattern between these features and sales make sense because there are many outliers having enormous sale values like Wii Sports, Tetris, Super Mario, etc. with irregular Year pattern. One can even guess next hit will belong to Nintendo due to the fact that 63% of top 100 games belongs to it, but nevertheless average games seem drops this correlation.
 
